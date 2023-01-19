@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +10,90 @@
 </head>
 <!-- npx tailwindcss -i ./input.css -o ./assest/css/style.css --watch -->
 
+<!-- <style>
+ a, div {
+     border: 1px solid red;
+  }
+</style> -->
  
 <body class="bg-film-lightBlue bg-opacity-5">
 
-  <!-- Header Section -->
-  <header class="bg-black py-2">
-    <!-- Header Container -->
-    <div class="container flex items-center justify-between space-x-16">
 
-      <!-- Header Logo -->
-      <canvas class="bg-blue-500 h-12"></canvas>
 
-      <nav>
-        <div class="flex items-center text-yellow-50 text-lg">
-        <a class="" href="">link</a>
-        <a class="" href="">link</a>
-        <a class="" href="">link</a>
-        <a class="" href="">link</a>
-        </div>
-      
-      </nav>
 
-    </div>
-    <!-- Header nav -->
+  <nav class= " bg-gray-800">
+    
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
   
-  </header>
-
+              Heroicon name: outline/bars-3
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+       
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x-mark
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+         
+         
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+        
+            <canvas class="bg-blue-500 block h-8 w-auto lg:hidden"></canvas>
+            <canvas class="bg-blue-500 h-12 hidden w-auto lg:block justify-center"></canvas>
+         
+            
+          </div>
+          
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-10 pt-3">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="hover:bg-gray-700 text-white rounded-md text-sm font-medium">Anasayfa</a>
+              <a href="#" class="hover:bg-gray-700 text-white rounded-md text-sm font-medium">Vizyondaki Filmler</a>
+  
+              <a href="#" class="text-white hover:bg-gray-700 hover:text-white rounded-md text-sm font-medium">Yakında</a>
+  
+              <a href="#" class="text-white hover:bg-gray-700 hover:text-white rounded-md text-sm font-medium">Bilet Al</a>
+  
+              <a href="#" class="text-white hover:bg-gray-700 hover:text-white rounded-md text-sm font-medium">Yönetici</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">RenkFilm</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Anasayfa</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Vizyondaki Filmler</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Yakkında</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          Bilet Al
+        </a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Yönetici</a>
+      </div>
+    </div>
+  </nav>
 
   <div class="container mt-96 bg-amber-50 mx-auto">
     <h1 class="font-body">
